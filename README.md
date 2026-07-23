@@ -222,7 +222,7 @@ Implementa `src/controllers/users.controller.js` y conecta el router en `src/con
 
 > **Importante**: declara la ruta `/users/me` **antes** de cualquier ruta con parámetros dinámicos como `/:id`. Express resuelve las rutas en orden de declaración.
 
-No olvides montar el router en `src/controllers/index.js` con `router.use(usersRouter)`.
+Cuando las cuatro funciones estén implementadas, descomenta las líneas correspondientes en `src/controllers/index.js` para registrar las rutas.
 
 Ejecuta `npm test`. Los tests de `users.test.js` deberían pasar.
 
@@ -265,6 +265,8 @@ const post = await Post.findById(req.params.id)
 
 **Eliminar** (`DELETE /posts/:id`): si no existe, responde `404`. Si existe, responde `204` (sin cuerpo).
 
+Cuando las cinco funciones estén implementadas, descomenta las líneas de posts en `src/controllers/index.js`.
+
 Ejecuta `npm test`. Los tests de `posts.test.js` deberían pasar.
 
 ---
@@ -285,6 +287,8 @@ Implementa `src/controllers/comments.controller.js` y móntalo en `src/controlle
 **Crear** (`POST /posts/:id/comments`): el `author` = `req.user._id`, el `post` = `req.params.id`. Responde `201`.
 
 **Eliminar** (`DELETE /posts/:id/comments/:commentId`): elimina por `req.params.commentId`. Si no existe, responde `404`. Si existe, responde `204`.
+
+Implementa las dos funciones y descomenta las líneas de comments en `src/controllers/index.js`.
 
 Ejecuta `npm test` para ver todos los tests en verde.
 

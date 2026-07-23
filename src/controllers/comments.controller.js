@@ -1,15 +1,15 @@
-const { Router } = require("express");
 // const createError = require("http-errors");
 // const Comment = require("../lib/models/comment.model");
-// const auth = require("../middlewares/auth.mid");
 
-const router = Router();
+// TODO Iteracion 5 [Bonus]: Implementar cada funcion y exportarlas al final del archivo
 
-// TODO Iteracion 5 [Bonus]: POST /posts/:id/comments — crear comentario (requiere auth)
-//   - author = req.user._id, post = req.params.id → 201
+const create = async (req, res, next) => {
+  // TODO: Crear comentario (author = req.user._id, post = req.params.id) → 201
+};
 
-// TODO Iteracion 5 [Bonus]: DELETE /posts/:id/comments/:commentId — eliminar comentario (requiere auth)
-//   - Si no existe → 404
-//   - Si existe → 204
+const remove = async (req, res, next) => {
+  // TODO: Eliminar comentario por req.params.commentId
+  // TODO: Si no existe → 404, si existe → 204
+};
 
-module.exports = router;
+module.exports = { create, remove };
