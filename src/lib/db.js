@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 const config = require("./config");
 const logger = require("./logger");
 
-mongoose.connect(config.get("db.uri")).catch((error) => {
-  logger.error(error);
-  process.exit(0);
-});
+mongoose
+  .connect(config.get("db.uri"))
+  .then(() => logger.info("Successfully connected to the database"))
+  .catch((error) => {
+    logger.error(error);
+    process.exit(0);
+  });
